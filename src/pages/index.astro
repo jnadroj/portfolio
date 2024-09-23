@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from "../components/SectionContainer.astro"
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Briefcase from '../components/icons/Briefcase.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import TitleSection from '@/components/TitleSection.astro';
+import Projects from '@/components/Projects.astro';
+import AboutMe from '@/components/AboutMe.astro';
+---
+
+<Layout
+ 	title="Portfolio of Jordan Jaramillo - FullStack Developer with over 5 years of experience"
+	description="Hire Jordan Jaramillo to build your web or mobile application. FullStack Developer specializing in creating unique applications."
+>
+  <main class="px-4">
+      <SectionContainer class="py-16 md:py-36">
+        <Hero />
+      </SectionContainer>
+      <div class="space-y-24">
+        <SectionContainer id="experience">
+            <TitleSection>
+              <Briefcase class="size-8" />
+              Work Experience
+            </TitleSection>
+            <Experience />
+        </SectionContainer>
+      <SectionContainer id="projects">
+        <TitleSection>
+          <CodeIcon class="size-7" />
+          Projects
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="about-me">
+        <TitleSection>
+          <ProfileCheck class="size-8" />
+          About Me
+        </TitleSection>
+        <AboutMe />
+      </SectionContainer>
+    </div>
+	</main>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Currently...",
+    title: "Sr Frontend Developer",
+    company: "Crehana",
+    description:
+      "Developed and managed libraries and infrastructure for the Crehana administration project, utilizing React, Next.js, and TurboPack within a Microfrontends architecture. Used Python and NodeJS to enhance backend modularity and scalability, enabling seamless integration of various platform components.",
+  },
+  {
+    date: "May 2022",
+    title: "Sr Full Stack Developer",
+    company: "Sofi",
+    description:
+      "Designed, developed, and scaled various microservices to enhance performance and ensure secure communications as a Sr Full Stack Developer. Contributed to new features for applications of different banks, including Diners and Banco de Córdoba, as well as for the Konecta assistance app featuring chatbots. Utilized AWS and Docker for microservice deployment, with PostgreSQL as the primary database.",
+  },
+  {
+    date: "May 2021",
+    title: "Ssr Full Stack Developer",
+    company: "JustMedia Group",
+    description:
+      "Developed the backend for the company's main application by migrating microservices built in Node.js with ExpressJS to NestJS for improved scalability and maintainability. Utilized GraphQL for data handling and RabbitMQ for messaging, while also implementing a payment gateway.",
+  },
+  {
+    date: 'May 2019 - June 2020',
+    title: 'Full Stack Developer',
+    company: 'Intelnexo',
+    description: "Contributed to a messaging application project with challenges around multi-language microservice communication (NodeJS, Laravel). Ensured secure, reliable inter-service communication, leveraging Redis and Azure for authentication, while using PostgreSQL for data persistence. Also responsible for setting up scheduled jobs for backend processes.",
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
